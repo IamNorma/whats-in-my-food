@@ -4,8 +4,8 @@ RSpec.describe Food do
   it "exists" do
     food_data = {
       description: "SWEET POTATOES",
-      upc: "070560951975",
-      brand_owner: "The Pictsweet Company",
+      gtinUpc: "070560951975",
+      brandOwner: "The Pictsweet Company",
       ingredients: "SWEET POTATOES."
     }
 

@@ -7,7 +7,8 @@ class FoodsController < ApplicationController
     response = conn.get("/fdc/v1/foods/search?query=#{food}&pageSize=10&api_key=#{ENV['FOOD_API_KEY']}")
 
     json = JSON.parse(response.body, symbolize_names: true)
-    @total_results = json[:totalHits]
-    @foods = json[:foods]
+    @foods = json[:foods].map do |food_data|
+      Food.new(food_data)
+    end
   end
 end

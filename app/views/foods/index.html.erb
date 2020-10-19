@@ -1,4 +1,4 @@
-<h1><%= @total_results %> Total Results</h1>
+<h1><%= @foods.count %> Total Results</h1>
 <% @foods.each do |food| %>
   <div class="food">
     <p class="upc"><%= food.upc %></p>

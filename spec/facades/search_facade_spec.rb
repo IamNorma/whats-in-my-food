@@ -9,5 +9,8 @@ RSpec.describe 'Search Facade' do
     expect(foods).to be_an(Array)
     expect(foods.first).to be_a(Food)
     expect(foods.first.description).to be_a(String)
+    expect(foods.first.upc).to be_a(String)
+    expect(foods.first.ingredients).to be_a(String)
+    expect(foods.first.brand_owner).to be_a(String)
   end
 end
